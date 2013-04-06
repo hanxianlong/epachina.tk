@@ -44,4 +44,4 @@
 #buttonPrev{float:left;width:20px;width:21px; height:110px;background:url(../images/bg.gif) no-repeat 0px -153px; } 
 .cases{margin-bottom:20px; overflow:auto;}
 .cases .case-item{ width:185px; float:left; margin-right:10px;  }
-.cases .right-ad{ width: 500px;float:right;padding:0;}
+.cases .right-advertise{ width: 500px;float:right;padding:0; height: 212px; }

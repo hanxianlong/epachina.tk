@@ -82,7 +82,10 @@ if ( !defined('ABSPATH')) exit;
                 <a href="/">Cases2</a><br/>
             </div>
         </div>
-        <div class="widget-wrapper right-ad"><img src="http://www.astd.org/~/media/Images/Marketing/011390%20ICE-retargeter-ad_600x250_v2.gif"/></div>
+        <div class="widget-wrapper right-advertise">
+            <a href="/">  <img src="http://www.astd.org/~/media/Images/Marketing/011390%20ICE-retargeter-ad_600x250_v2.gif"/>
+            </a>
+        </div>
     </div>
     <hr class="line"/>
 
