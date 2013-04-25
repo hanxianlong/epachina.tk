@@ -2927,7 +2927,7 @@ ul.sub-menu li{text-align:left;}
 .widget-home-right ul{padding-left:0px; margin:0px;}
 .widget-home-right li{height:25px;overflow:hidden;list-style: none; border-bottom:1px solid #afafaf; line-height:35px; height:35px; padding-left: 10px;}
 .video-item{float:left; width:168px; overflow:hidden; height:210px; margin-top:20px; margin-left:18px; }
-.video-item img{height:180px; width:164.6px;}
+.video-item img{height:155px; width:164.6px;}
 .video-item div{text-align:center; margin-top:8px;}
 .video-item a{ font-size:12px}
 .widget-home-right li:last{border:0;}

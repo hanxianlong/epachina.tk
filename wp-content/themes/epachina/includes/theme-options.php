@@ -337,6 +337,25 @@ function responsive_theme_options_do_page() {
                 </div><!-- end of .rwd-block -->
             </div><!-- end of "rwd-container 联系方式 -->
             
+              <h3 class="rwd-toggle"><a href="#">首页最新资讯下方模块及广告设置</a></h3>
+            <div class="rwd-container">
+                <div class="rwd-block">
+                    <div class="grid col-300">右侧广告图片</div><!-- end of .grid col-300 -->
+                    <div class="grid col-620 fit">
+                        <textarea  id="responsive_theme_options[home_bottom_ad]" class="large-text"  cols="50" rows="10"
+                               type="text" name="responsive_theme_options[home_bottom_ad]" 
+                               ><?php if (!empty($options['home_bottom_ad'])) echo esc_textarea($options['home_bottom_ad']); ?></textarea>
+                       <br/> <label class="description" for="responsive_theme_options[home_bottom_ad]">广告内容(可自由的填写HTML）</label>
+                    </div><!-- end of .grid col-620 -->
+                    <div class="grid col-620 fit">
+                        <p class="submit">
+                        <input type="submit" class="button-primary" value="<?php _e('Save Options', 'responsive'); ?>" />
+                        </p>
+                    </div><!-- end of .grid col-620 -->
+
+                </div><!-- end of .rwd-block -->
+            </div><!-- end of "rwd-container 联系方式 -->
+            
             <h3 class="rwd-toggle"><a href="#"><?php _e('Custom CSS Styles', 'responsive'); ?></a></h3>
             <div class="rwd-container">
                 <div class="rwd-block"> 
@@ -411,9 +430,7 @@ function responsive_theme_options_validate($input) {
 	}
 	
     $input['home_focus_left_slider'] = wp_kses_stripslashes($input['home_focus_left_slider']);
-  
-
-	  $input['home_focus_middle1_img'] = esc_url_raw($input['home_focus_middle1_img']);
+    $input['home_focus_middle1_img'] = esc_url_raw($input['home_focus_middle1_img']);
     $input['home_focus_middle1_link'] = esc_url_raw($input['home_focus_middle1_link']);
     $input['home_focus_middle1_title'] = wp_kses_stripslashes($input['home_focus_middle1_title']);
 
@@ -440,6 +457,6 @@ function responsive_theme_options_validate($input) {
  	$input['responsive_inline_css'] = wp_kses_stripslashes($input['responsive_inline_css']);
 	$input['responsive_inline_js_head'] = wp_kses_stripslashes($input['responsive_inline_js_head']);
 	$input['responsive_inline_css_js_footer'] = wp_kses_stripslashes($input['responsive_inline_css_js_footer']);
-	
+	$input['home_bottom_ad'] = wp_kses_stripslashes($input['home_bottom_ad']);
     return $input;
 }

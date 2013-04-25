@@ -27,14 +27,20 @@ if ( !defined('ABSPATH')) exit;
         <?php endif; ?>
 		<div style="clear:both">
 		<?php 
-		the_post();
-		//the_content();
+                    the_post();
+                    the_content();
 		?>
 		</div>
 		<?php /**<h2 class="heading"><span>最新视频</span></h2> */?>
 <?php 
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$query_string='posts_per_page=20&paged='.$paged . '&category_name=videos';
+$scat = 'videos';
+if(isset($_GET['scat']))
+    $scat = $_GET['scat'];
+
+$query_string='posts_per_page=20&paged='.$paged . '&category_name='.$scat;
+
+//echo $query_string;
 query_posts($query_string);
 if (have_posts()) :
  ?>

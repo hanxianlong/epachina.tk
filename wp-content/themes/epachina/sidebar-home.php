@@ -59,26 +59,35 @@ endif; ?>
     <hr class="line"/>
     <div class="cases">
         <div class="widget-wrapper case-item">
-            <div class="widget-title-home bottom-solid-line"><h3><a href="#">精彩案例</a></h3></div>
-            <div class=""><img src="http://www.astd.org/~/media/Images/Community-Featured-Image/TOUCHMAP.jpg"/></div>
+            <div class="widget-title-home bottom-solid-line"><h3><a href="/cat/blogs/">研究员观点</a></h3></div>
+            <div class=""><img  style="height:65px;width:185px" src="http://epachina.org/wp-content/uploads/2013/05/111-150x150.jpg"/></div>
             <div class="case-entry">
-                <a href="/">避免工作和生活中十大错误</a><br/>
-                <a href="/">专业：配合，比专业能力重要</a><br/>
-                <a href="/">演示:打动客户的销售演示</a><br/>
+                <?php wp_reset_query();
+$query_string='posts_per_page=3&paged=1&category_name=blogs';
+query_posts($query_string);
+if (have_posts()) :
+    while (have_posts()) : the_post();
+ ?>
+                <a href="<?php echo get_permalink(get_the_id());?>" title="<?php the_title() ?>" target="_blank"><?php echo mb_substr(get_the_title(),1,13,'utf8'); ?></a><br/> 
+                <?php endwhile; endif; ?>
             </div>
         </div>
         <div class="widget-wrapper case-item">
-            <div class="widget-title-home bottom-solid-line"><h3><a href="#">资源精华</a></h3></div>
-            <div class=""><img src="http://www.astd.org/~/media/Images/Community-Featured-Image/TOUCHMAP.jpg"/></div>
+            <div class="widget-title-home bottom-solid-line"><h3><a href="/cat/profession-articles/">行业信息</a></h3></div>
+            <div class=""><img style="height:65px;width:185px" src="http://www.jobexcel.com/uploads/allimg/130418/1_1948303231.jpg"/></div>
             <div class="case-entry">
-                <a href="/">英文写作：商务英文写作</a><br/>
-                <a href="/">商务演讲：魅力商务演讲</a><br/>
-                <a href="/">文化沟通：跨文化沟通</a><br/>
+                 <?php wp_reset_query();
+$query_string='posts_per_page=3&paged=1&category_name=profession-articles';
+query_posts($query_string);
+if (have_posts()) :
+    while (have_posts()) : the_post();
+ ?>
+                <a href="<?php echo get_permalink(get_the_id());?>" title="<?php the_title() ?>" target="_blank"><?php echo mb_substr(get_the_title(),1,13,'utf8'); ?></a><br/> 
+                <?php endwhile; endif; ?>
             </div>
         </div>
         <div class="widget-wrapper right-advertise">
-            <a href="/">  <img src="http://www.astd.org/~/media/Images/Marketing/011390%20ICE-retargeter-ad_600x250_v2.gif"/>
-            </a>
+           <?php echo $options['home_bottom_ad']; ?>
         </div>
     </div>
     <hr class="line"/>

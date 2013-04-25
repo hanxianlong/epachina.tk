@@ -887,7 +887,7 @@ class WP_Widget_Recent_Video_Posts extends WP_Widget {
 		<?php while ( $r->have_posts() ) : $r->the_post(); ?>
                        <div class="video-item">
 			<a href="/?p=<?php the_ID() ?>" title="<?php the_title_attribute(); ?>">
-                            <img src="http://www.thinkplus.cc/media/images/2012/11/15/479f0cdb3fb5.jpg" />
+                            <img src="<?php echo the_post_thumbnail_url(get_the_ID()); ?>" />
                                                     </a>
                                                     <div>
                                                     <a href="/?p=<?php the_ID() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
