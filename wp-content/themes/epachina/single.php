@@ -35,9 +35,9 @@ if ( !defined('ABSPATH')) exit;
                 <h1 class="single-post-title"><?php the_title(); ?></h1>
 
                 <div class="post-meta">
-                <?php responsive_post_meta_data(); ?>
+                <?php //responsive_post_meta_data(); ?>
                 
-				    <?php if ( comments_open() ) : ?>
+				    <?php if (false&& comments_open() ) : ?>
                         <span class="comments-link">
                         <span class="mdash">&mdash;</span>
                     <?php comments_popup_link(__('No Comments &darr;', 'responsive'), __('1 Comment &darr;', 'responsive'), __('% Comments &darr;', 'responsive')); ?>

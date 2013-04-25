@@ -24,27 +24,21 @@ if ( !defined('ABSPATH')) exit;
             <div class="widget-wrapper">
                 <div class="widget-title-home bottom-solid-line"><h3>最新资讯</h3></div>
             </div>
+            <?php wp_reset_query();
+$query_string='posts_per_page=5&paged=1&category_name=show-on-home';
+query_posts($query_string);
+if (have_posts()) :
+ ?>
+		<?php while (have_posts()) : the_post(); ?>
             <div class="post-entry bottom-dotted-line">
-                <div class="featured-img"><img src="http://hanxianlong.tk/a.jpg" height="150px" width="150px"/></div>
+                <div class="featured-img"><img src="<?php echo the_post_thumbnail_url(get_the_ID())?>" height="150px" width="150px"/></div>
                 <div class="post-content">
-                    <h1 class="post-title"><a href="/">全美IPO路演大师Weissman访问中国</a></h1>
-                    <p><a href="/"><i>文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容</i></a></p>
+                    <h1 class="post-title"><a target="_blank" href="<?php echo get_permalink(get_the_id()) ?>"><?php the_title() ?></a></h1>
+                    <p><a  target="_blank"  href="<?php echo get_permalink(get_the_id()) ?>"><?php the_excerpt() ?></a></p>
                 </div>
             </div>
-             <div class="post-entry bottom-dotted-line">
-                <div class="featured-img"><img src="http://hanxianlong.tk/a.jpg" height="150px" width="150px"/></div>
-                <div class="post-content">
-                    <h1 class="post-title"><a href="/">三八妇女节职场幸福感系列讲座</a></h1>
-                    <p><a href="/"><i>新年伊始，妇女节临近，JobExcel为您推出了EAP员工关怀——提升职场幸福感系列讲座与互动实践课程，我们邀请商务礼仪、形象设计、妆容修饰、音乐赏析、亲子沟通等领域内的专家及知名讲师，为企业员工提供最人性化的关怀，繁忙的工作之余，别忘放松自己的身心，提升自我品位修养。</i></a></p>
-                </div>
-            </div>
-             <div class="post-entry bottom-dotted-line">
-                <div class="featured-img"><img src="http://hanxianlong.tk/a.jpg" height="150px" width="150px"/></div>
-                <div class="post-content">
-                    <h1 class="post-title"><a href="/">将成功率提高一倍的10个基本销售技巧</a></h1>
-                    <p><a href="/"><i>想要确保更多的潜在的高品质的顾客成为实际的终身付费的客户吗？以下十件事是你今天就能开始轻松将你的转换率提高一倍的诀窍，很有可能在这个季度，以及以后帮助你进入公司的“销售冠军圈”</i></a></p>
-                </div>
-            </div>
+            <?php endwhile; 
+endif; ?>
             <div class="more"><a href="/">更多详情》》</a></div>
         </div><!-- end of .col-300 -->
         
@@ -95,23 +89,12 @@ if ( !defined('ABSPATH')) exit;
             <div id="buttonPrev"></div>
             <div id="imagesContainer">
                 <ul id="frameView">
-                 <li><a href="#"><img alt="" src="http://jobexcel.com/images/clients/moto.jpg"></a></li>
-                 <li><a href="#"><img alt="" src="http://jobexcel.com/images/clients/moto.jpg"></a></li>
-                 <li><a href="#"><img alt="" src="http://jobexcel.com/images/clients/moto.jpg"></a></li>
-                 <li><a href="#"><img alt="" src="http://jobexcel.com/images/clients/moto.jpg"></a></li>
-                 <li><a href="#"><img alt="" src="http://jobexcel.com/images/clients/moto.jpg"></a></li>
-                 <li><a href="#"><img alt="" src="http://jobexcel.com/images/clients/moto.jpg"></a></li>
-                 <li><a href="#"><img alt="" src="http://jobexcel.com/images/clients/moto.jpg"></a></li>
-                 <li><a href="#"><img alt="" src="http://jobexcel.com/images/clients/moto.jpg"></a></li>
-                 <li><a href="#"><img alt="" src="http://jobexcel.com/images/clients/moto.jpg"></a></li>
-                 <li><a href="#"><img alt="" src="http://jobexcel.com/images/clients/moto.jpg"></a></li>
-                 <li><a href="#"><img alt="" src="http://jobexcel.com/images/clients/moto.jpg"></a></li>
-                 <li><a href="#"><img alt="" src="http://jobexcel.com/images/clients/moto.jpg"></a></li>
-                 <li><a href="#"><img alt="" src="http://jobexcel.com/images/clients/moto.jpg"></a></li>
-                 <li><a href="#"><img alt="" src="http://jobexcel.com/images/clients/moto.jpg"></a></li>
-                 <li><a href="#"><img alt="" src="http://jobexcel.com/images/clients/moto.jpg"></a></li>
-                 
-                 
+                    <li><a target="_blank" title="暴风影音" href="//www.baofeng.com"><img alt="" src="<?php echo get_template_directory_uri(); ?>/logos/baofeng.jpg"></a></li>
+                 <li><a target="_blank" title="南都" href="//www.nbweekly.com"><img alt="" src="<?php echo get_template_directory_uri(); ?>/logos/nandu.jpg"></a></li>
+                 <li><a target="_blank" title="Poewr"  href="//www.powerltd.com"><img alt="" src="<?php echo get_template_directory_uri(); ?>/logos/power.jpg"></a></li>
+                 <li><a  target="_blank" title="环企" href="//www.gemag.com.cn"><img alt="" src="<?php echo get_template_directory_uri(); ?>/logos/huanqi.jpg"></a></li>
+                 <li><a target="_blank" title="听到"  href="//www.tndao.com"><img alt="" src="<?php echo get_template_directory_uri(); ?>/logos/tingdao.jpg"></a></li>
+                 <li><a target="_blank" title="湛庐文化" href="//blog.sina.com.cncheersbooks"><img alt="" src="<?php echo get_template_directory_uri(); ?>/logos/zhanlu.jpg"></a></li>
                 </ul> 
              </div>
             <div id="buttonNext"></div>

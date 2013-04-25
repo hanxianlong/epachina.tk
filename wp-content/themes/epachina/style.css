@@ -23,7 +23,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     margin: 0;
 	padding: 0;
 	vertical-align: baseline;
-	 font-family: "Trebuchet MS",Helvetica,"Microsoft YaHei",Georgia,sans-serif;
+	 /*font-family: "Trebuchet MS",Helvetica,"Microsoft YaHei",Georgia,sans-serif;*/
+         font-family:"Arial","华文细黑","Microsoft Yahei",SimSun,sans-sefif;
 }
 
 /*HTML5 display-role reset for older browsers */
@@ -2925,13 +2926,15 @@ ul.sub-menu li{text-align:left;}
 .widget-home-right h3 {padding-left:20px; line-height:30px; font-size: 15px; margin-bottom:5px;  color:#fff; background-color:#005284;}
 .widget-home-right ul{padding-left:0px; margin:0px;}
 .widget-home-right li{height:25px;overflow:hidden;list-style: none; border-bottom:1px solid #afafaf; line-height:35px; height:35px; padding-left: 10px;}
-.video-item{float:left; width:220px; height:200px; margin-top:20px; margin-left:15px; }
+.video-item{float:left; width:168px; overflow:hidden; height:210px; margin-top:20px; margin-left:18px; }
+.video-item img{height:180px; width:164.6px;}
+.video-item div{text-align:center; margin-top:8px;}
 .video-item a{ font-size:12px}
 .widget-home-right li:last{border:0;}
 .widget-home-right .widget_recent_video {outline:1px solid #afafaf; border:0px !important;}
-.widget-home-right .widget_recent_video .video-item{float:left; width:100px; height:100px; margin-top:20px;}
+.widget-home-right .widget_recent_video .video-item{float:left; width:100px; margin-left:15px; height:100px; margin-top:20px;}
 .widget-home-right .widget_recent_video .video-item img{width:100px; height:77px;}
-.widget-home-right .widget_recent_video .video-item div{float:left; width:100px; height:20px; overflow:hidden; }
+.widget-home-right .widget_recent_video .video-item div{float:left; width:100px; height:20px; margin-top:0px; overflow:hidden; }
 
 .post-entry .featured-img{width:130px;float:left; border:3px solid #ccc; }
 .post-entry .featured-img img{width:130px;height:130px;}

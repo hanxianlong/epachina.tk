@@ -28,21 +28,20 @@ if ( !defined('ABSPATH')) exit;
 		<div style="clear:both">
 		<?php 
 		the_post();
-		the_content();
+		//the_content();
 		?>
 		</div>
-		<h2 class="heading"><span>最新视频</span></h2>
+		<?php /**<h2 class="heading"><span>最新视频</span></h2> */?>
 <?php 
-$cate_name=get_post_meta(get_the_ID(),'video_cate_name',true);
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$query_string='posts_per_page=20&paged='.$paged . '&category_name='.$cate_name;
+$query_string='posts_per_page=20&paged='.$paged . '&category_name=videos';
 query_posts($query_string);
 if (have_posts()) :
  ?>
 		<?php while (have_posts()) : the_post(); ?>
 	<div class="video-item">
             <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                            <img src="<?php echo the_post_thumbnail_url(get_the_ID())?>" />
+                            <img src="<?php echo the_post_thumbnail_url(get_the_ID())?>" height="190px" width="220px" />
 			</a>
 			<div>
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
