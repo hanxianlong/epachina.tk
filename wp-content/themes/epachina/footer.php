@@ -104,12 +104,12 @@ if ( !defined('ABSPATH')) exit;
             <?php esc_attr_e('&copy;', 'responsive'); ?> <?php _e(date('Y')); ?><a href="<?php echo home_url('/') ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
                 <?php bloginfo('name'); ?>
             </a> &nbsp;&nbsp;
-<!--以下是QQ邮件列表订阅嵌入代码--><a target="_blank" href="http://list.qq.com/cgi-bin/qf_invite?id=20201c286fd844c1d7b72e45b0bff13ddb255447eaf0c785"><img border="0" alt="填写您的邮件地址，订阅我们的精彩内容：" src="http://rescdn.list.qq.com/zh_CN/htmledition/images/qunfa/manage/picMode_light_s.png" /></a>
+<!--以下是QQ邮件列表订阅嵌入代码--><a target="_blank" href="http://list.qq.com/cgi-bin/qf_invite?id=2cd5f19c7140007d64a60501e1c0883137e5ff5dcaa96912"><img border="0" alt="填写您的邮件地址，订阅我们的精彩内容：" src="http://rescdn.list.qq.com/zh_CN/htmledition/images/qunfa/manage/picMode_light_s.png" /></a>
         </div><!-- end of .copyright -->
         <div class="grid col-620 right fit powered">
             地址：<?php echo $options['address']; ?> 
-            电话：<?php echo $options['fax']; ?> 传真：<?php echo $options['fax']; ?>  邮箱：<?php echo $options['mail']; ?> 
-            <br/>备案号：京1333456
+            电话：010-82865146 传真：<?php echo $options['fax']; ?> <br/> 邮箱：<?php echo $options['mail']; ?> 
+            <br/>备案号： 京ICP备12029993号
         </div><!-- end .powered -->
         
     </div><!-- end #footer-wrapper -->
