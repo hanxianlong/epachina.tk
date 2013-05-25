@@ -64,20 +64,10 @@ if (have_posts()) :
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
 	</div>
         <?php endwhile; ?>
-
-        <?php if (  $wp_query->max_num_pages > 1 ) : ?>
-	<div class="navigation" style="clear:both; text-align:center;width:300px;">
-            <div class="previous"><?php previous_posts_link( '上一页' ); ?></div>
-			<div class="next"><?php next_posts_link( '下一页' ); ?></div>
-</div><!-- end of .navigation -->
-        <?php endif; ?>
-
-	    <?php else : ?>
+	 <?php pagenavi(); ?>
+	<?php else : ?>
 
         <h1 class="title-404">很抱歉，暂无视频,请稍后回来。</h1>
-
-       
-
 <?php endif; ?>  
       
         </div><!-- end of #content -->

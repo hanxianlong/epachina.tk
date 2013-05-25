@@ -25,7 +25,7 @@ if ( !defined('ABSPATH')) exit;
                 <div class="widget-title-home bottom-solid-line"><h3>最新资讯</h3></div>
             </div>
             <?php wp_reset_query();
-$query_string='posts_per_page=5&paged=1&category_name=show-on-home';
+$query_string='posts_per_page=3&paged=1&category_name=show-on-home';
 query_posts($query_string);
 if (have_posts()) :
  ?>
@@ -68,7 +68,7 @@ query_posts($query_string);
 if (have_posts()) :
     while (have_posts()) : the_post();
  ?>
-                <a href="<?php echo get_permalink(get_the_id());?>" title="<?php the_title() ?>" target="_blank"><?php echo mb_substr(get_the_title(),1,13,'utf8'); ?></a><br/> 
+                <a href="<?php echo get_permalink(get_the_id());?>" title="<?php the_title() ?>" target="_blank"><?php echo mb_substr(get_the_title(),0,14,'utf8'); ?></a><br/> 
                 <?php endwhile; endif; ?>
             </div>
         </div>
@@ -82,7 +82,7 @@ query_posts($query_string);
 if (have_posts()) :
     while (have_posts()) : the_post();
  ?>
-                <a href="<?php echo get_permalink(get_the_id());?>" title="<?php the_title() ?>" target="_blank"><?php echo mb_substr(get_the_title(),1,13,'utf8'); ?></a><br/> 
+                <a href="<?php echo get_permalink(get_the_id());?>" title="<?php the_title() ?>" target="_blank"><?php echo mb_substr(get_the_title(),0,14,'utf8'); ?></a><br/> 
                 <?php endwhile; endif; ?>
             </div>
         </div>
